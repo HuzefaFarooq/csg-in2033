@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8148f834-f186-49fc-8811-247a7f4f1461" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/src/ac/csg/in2033/ipos/pu/gui/HelloFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/src/ac/csg/in2033/ipos/pu/gui/HelloFX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/src/ac/csg/in2033/ipos/pu/gui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/src/ac/csg/in2033/ipos/pu/gui/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-9.3.1-bin/23ovyewtku6u96viwx3xl3oks/gradle-9.3.1" javaHome="/usr/lib/jvm/default" gradleVersion="9.3.1" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="3AoOxJDuBZq9lSFNFH5vS68gzWd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build IPOS-PU.executor": "Run",
+    "Gradle.IPOS-PU [:src:gui:ac.csg.in2033.ipos.pu.gui.Main.main()].executor": "Run",
+    "Gradle.IPOS-PU [:src:main:java:gui:ac.csg.in2033.ipos.pu.gui.Main.main()].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/fury/Git/Uni/Year 2/Coursework/IN2033/mediflow-solutions/csg-in2033/IPOS-PU/src/main/resources",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8148f834-f186-49fc-8811-247a7f4f1461" name="Changes" comment="" />
+      <created>1773255702260</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1773255702260</updated>
+    </task>
+    <servers />
+  </component>
+</project>

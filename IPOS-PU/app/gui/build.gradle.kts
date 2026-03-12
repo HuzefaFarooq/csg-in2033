@@ -6,7 +6,7 @@ plugins {
 
 javafx {
     version = "21"
-    modules("javafx.controls")
+    modules("javafx.controls", "javafx.fxml")
 }
 
 application {

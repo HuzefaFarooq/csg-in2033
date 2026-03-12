@@ -17,6 +17,8 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.geometry.Pos;
 
+// WARNING:     THIS CLASS HAS NOW BEEN DEPRECATED
+
 public class HelloFX extends Application {
 
     @Override

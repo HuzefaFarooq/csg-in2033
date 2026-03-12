@@ -29,6 +29,9 @@ subprojects {
     dependencies {
         "testImplementation"("org.junit.jupiter:junit-jupiter:6.0.3")
         "testRuntimeOnly"("org.junit.platform:junit-platform-launcher")
+
+        "implementation"("ch.qos.logback:logback-classic:1.5.18")
+        "implementation"("ch.qos.logback:logback-core:1.5.18")
     }
 
     //tasks.withType<ShadowJar>().configureEach {

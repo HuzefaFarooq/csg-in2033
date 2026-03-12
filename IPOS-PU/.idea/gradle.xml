@@ -20,11 +20,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/app/gui" />
             <option value="$PROJECT_DIR$/buildSrc" />
-            <option value="$PROJECT_DIR$/src" />
-            <option value="$PROJECT_DIR$/src/main" />
-            <option value="$PROJECT_DIR$/src/main/java" />
-            <option value="$PROJECT_DIR$/src/main/java/gui" />
           </set>
         </option>
       </GradleProjectSettings>

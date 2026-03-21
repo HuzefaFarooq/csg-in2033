@@ -5,24 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8148f834-f186-49fc-8811-247a7f4f1461" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/prm/src/test/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/prm/src/test/resources/resource.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/comms/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/comms/src/main/java/ac/csg/in2033/ipos/pu/comms/AppView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/comms/src/main/java/ac/csg/in2033/ipos/pu/comms/AppViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/comms/src/main/java/ac/csg/in2033/ipos/pu/comms/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/comms/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/comms/src/main/resources/ac/csg/in2033/ipos/pu/comms/fxml/app-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/comms/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/comms/src/test/java/ac/csg/in2033/ipos/pu/comms/AppViewTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/comms/src/test/resources/ac/csg/in2033/ipos/pu/comms/fxml/app-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/members/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/members/src/main/java/ac/csg/in2033/ipos/pu/members/AppView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/members/src/main/java/ac/csg/in2033/ipos/pu/members/AppViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/members/src/main/java/ac/csg/in2033/ipos/pu/members/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/members/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/members/src/main/resources/ac/csg/in2033/ipos/pu/members/fxml/app-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/members/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/members/src/test/java/ac/csg/in2033/ipos/pu/members/AppViewTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/members/src/test/resources/ac/csg/in2033/ipos/pu/members/fxml/app-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/sales/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/sales/src/main/java/ac/csg/in2033/ipos/pu/sales/AppView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/sales/src/main/java/ac/csg/in2033/ipos/pu/sales/AppViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/sales/src/main/java/ac/csg/in2033/ipos/pu/sales/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/sales/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/sales/src/main/resources/ac/csg/in2033/ipos/pu/sales/fxml/app-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/sales/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/sales/src/test/java/ac/csg/in2033/ipos/pu/sales/AppViewTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/sales/src/test/resources/ac/csg/in2033/ipos/pu/sales/fxml/app-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/gui/IPOS-PU.app.gui.test.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prm/src/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/prm/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prm/src/main/java/ac/csg/in2033/ipos/pu/prm/AppView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/prm/src/main/java/ac/csg/in2033/ipos/pu/prm/AppView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prm/src/main/java/ac/csg/in2033/ipos/pu/prm/AppViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/prm/src/main/java/ac/csg/in2033/ipos/pu/prm/AppViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prm/src/main/java/ac/csg/in2033/ipos/pu/prm/HelloFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/prm/src/main/java/ac/csg/in2033/ipos/pu/prm/HelloFX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prm/src/main/java/ac/csg/in2033/ipos/pu/prm/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/prm/src/main/java/ac/csg/in2033/ipos/pu/prm/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prm/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/prm/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prm/src/main/resources/ac/csg/in2033/ipos/pu/gui/fxml/app-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/app/prm/src/main/resources/ac/csg/in2033/ipos/pu/prm/fxml/app-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prm/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/prm/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/HelloFX.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/gui/src/main/resources/resource.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prm/src/main/java/ac/csg/in2033/ipos/pu/prm/HelloFX.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prm/src/main/resources/resource.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/rpt/src/main/java/ac/csg/in2033/ipos/pu/rpt/HelloFX.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/rpt/src/main/resources/resource.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,36 +98,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AppViewTest.start.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build IPOS-PU.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.IPOS-PU [:app:gui:ac.csg.in2033.ipos.pu.gui.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.IPOS-PU [:src:gui:ac.csg.in2033.ipos.pu.gui.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.IPOS-PU [:src:main:java:gui:ac.csg.in2033.ipos.pu.gui.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/fury/Git/Uni/Year 2/Coursework/IN2033/mediflow-solutions/csg-in2033/IPOS-PU/app/prm/src/test/resources&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Gradle.AppViewTest.start.executor": "Run",
+    "Gradle.Build IPOS-PU.executor": "Run",
+    "Gradle.IPOS-PU [:app:comms:ac.csg.in2033.ipos.pu.comms.Main.main()].executor": "Run",
+    "Gradle.IPOS-PU [:app:gui:ac.csg.in2033.ipos.pu.gui.Main.main()].executor": "Run",
+    "Gradle.IPOS-PU [:app:members:ac.csg.in2033.ipos.pu.members.Main.main()].executor": "Run",
+    "Gradle.IPOS-PU [:app:prm:ac.csg.in2033.ipos.pu.prm.Main.main()].executor": "Run",
+    "Gradle.IPOS-PU [:app:rpt:ac.csg.in2033.ipos.pu.rpt.Main.main()].executor": "Run",
+    "Gradle.IPOS-PU [:app:sales:ac.csg.in2033.ipos.pu.sales.Main.main()].executor": "Run",
+    "Gradle.IPOS-PU [:src:gui:ac.csg.in2033.ipos.pu.gui.Main.main()].executor": "Run",
+    "Gradle.IPOS-PU [:src:main:java:gui:ac.csg.in2033.ipos.pu.gui.Main.main()].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/fury/Git/Uni/Year 2/Coursework/IN2033/mediflow-solutions/csg-in2033/IPOS-PU/app",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/prm/src/test/resources" />
       <recent name="$PROJECT_DIR$/app/gui/src/test/resources/ac/csg/in2033/ipos/pu/gui/fxml" />
       <recent name="$PROJECT_DIR$/app/gui/src/main/resources" />
       <recent name="$PROJECT_DIR$/app/gui/src/main/resources/ac/csg/in2033/ipos/pu/gui/fxml" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java" />

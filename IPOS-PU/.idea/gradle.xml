@@ -20,9 +20,12 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/app/comms" />
             <option value="$PROJECT_DIR$/app/gui" />
+            <option value="$PROJECT_DIR$/app/members" />
             <option value="$PROJECT_DIR$/app/prm" />
             <option value="$PROJECT_DIR$/app/rpt" />
+            <option value="$PROJECT_DIR$/app/sales" />
             <option value="$PROJECT_DIR$/buildSrc" />
           </set>
         </option>

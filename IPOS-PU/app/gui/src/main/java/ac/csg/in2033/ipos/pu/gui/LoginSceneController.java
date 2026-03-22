@@ -6,17 +6,20 @@ import javafx.scene.control.TextField;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class LoginController {
-    private final static Logger logger = LoggerFactory.getLogger(LoginController.class);
+public class LoginSceneController extends SceneController {
+    private final static Logger logger = LoggerFactory.getLogger(LoginSceneController.class);
 
     @FXML
     private TextField user;
 
     @FXML
-    private TextField password;
+    private TextField pass;
 
     @FXML
     private Button loginButton;
+
+    @FXML
+    private Button registerButton;
 
     @FXML
     protected void OnLoginButtonClick() {
@@ -24,6 +27,10 @@ public class LoginController {
         if (logger.isDebugEnabled()) {
             logger.debug("Login button pressed.");
         }
+
+        // these will be passed somewhere else
+        String username = user.getText();
+        String password = pass.getText();
 
         // send user/password text to other system
         // check if user/password are correctly formatted
@@ -40,7 +47,15 @@ public class LoginController {
             logger.debug("Register button pressed.");
         }
 
-        // change view to register screen
+        // these will be passed somewhere else
+        String username = user.getText();
+        String password = pass.getText();
+
+        // send user/password text to other system
+        // check if user/password are correctly formatted
+        // check if user exists
+        // if user details don't exist, pass them along
+        // if commercial, send to IPOS-SA
     }
 
 }

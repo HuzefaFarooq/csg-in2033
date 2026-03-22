@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8148f834-f186-49fc-8811-247a7f4f1461" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/SceneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/StageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/gui/src/main/resources/ac/csg/in2033/ipos/pu/gui/fxml/login-menu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/AppView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/AppView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/AppViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/AppViewSceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/LoginSceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/gui/src/main/resources/ac/csg/in2033/ipos/pu/gui/fxml/app-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/app/gui/src/main/resources/ac/csg/in2033/ipos/pu/gui/fxml/app-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/gui/src/test/resources/ac/csg/in2033/ipos/pu/gui/fxml/app-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/app/gui/src/test/resources/ac/csg/in2033/ipos/pu/gui/fxml/app-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prm/src/test/resources/ac/csg/in2033/ipos/pu/gui/fxml/app-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/app/prm/src/test/resources/ac/csg/in2033/ipos/pu/gui/fxml/app-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +52,7 @@
         <option value="module-info" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>

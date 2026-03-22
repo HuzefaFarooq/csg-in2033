@@ -5,10 +5,10 @@ import javafx.scene.control.Label;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class AppViewController {
+public class AppViewSceneController extends SceneController {
     String javafxVersion = System.getProperty("javafx.version");
     String javaVersion = System.getProperty("java.version");
-    private final static Logger logger = LoggerFactory.getLogger(AppViewController.class);
+    private final static Logger logger = LoggerFactory.getLogger(AppViewSceneController.class);
 
     @FXML
     private Label javafxVersionText;

@@ -1,8 +1,6 @@
 package ac.csg.in2033.ipos.pu.gui;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -10,11 +8,9 @@ import java.io.IOException;
 public class AppView extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/app-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 680, 480);
-        stage.setTitle("Java App");
-        stage.setScene(scene);
-        stage.show();
+        StageController.setStage(stage);
+        StageController.setTitle("Login");
+        StageController.setScene(getClass().getResource("fxml/login-menu.fxml"));
     }
 
     public static void main(String[] args) {

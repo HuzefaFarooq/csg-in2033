@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8148f834-f186-49fc-8811-247a7f4f1461" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/SceneController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/StageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/gui/src/main/resources/ac/csg/in2033/ipos/pu/gui/fxml/login-menu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/members/src/main/java/ac/csg/in2033/ipos/pu/members/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/members/src/main/java/ac/csg/in2033/ipos/pu/members/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/AppView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/AppView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/AppViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/AppViewSceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/LoginSceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/gui/src/main/resources/ac/csg/in2033/ipos/pu/gui/fxml/app-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/app/gui/src/main/resources/ac/csg/in2033/ipos/pu/gui/fxml/app-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/gui/src/test/resources/ac/csg/in2033/ipos/pu/gui/fxml/app-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/app/gui/src/test/resources/ac/csg/in2033/ipos/pu/gui/fxml/app-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prm/src/test/resources/ac/csg/in2033/ipos/pu/gui/fxml/app-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/app/prm/src/test/resources/ac/csg/in2033/ipos/pu/gui/fxml/app-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/members/src/main/java/ac/csg/in2033/ipos/pu/members/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/members/src/main/java/ac/csg/in2033/ipos/pu/members/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +45,8 @@
       <list>
         <option value="module-info" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -69,33 +63,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AppViewTest.start.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build IPOS-PU.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.IPOS-PU [:app:comms:ac.csg.in2033.ipos.pu.comms.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.IPOS-PU [:app:gui:ac.csg.in2033.ipos.pu.gui.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.IPOS-PU [:app:members:ac.csg.in2033.ipos.pu.members.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.IPOS-PU [:app:prm:ac.csg.in2033.ipos.pu.prm.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.IPOS-PU [:app:rpt:ac.csg.in2033.ipos.pu.rpt.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.IPOS-PU [:app:sales:ac.csg.in2033.ipos.pu.sales.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.IPOS-PU [:src:gui:ac.csg.in2033.ipos.pu.gui.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.IPOS-PU [:src:main:java:gui:ac.csg.in2033.ipos.pu.gui.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/fury/Git/Uni/Year 2/Coursework/IN2033/mediflow-solutions/csg-in2033/IPOS-PU/app&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Gradle.AppViewTest.executor": "Run",
+    "Gradle.AppViewTest.start.executor": "Run",
+    "Gradle.Build IPOS-PU.executor": "Run",
+    "Gradle.IPOS-PU [:app:comms:ac.csg.in2033.ipos.pu.comms.Main.main()].executor": "Run",
+    "Gradle.IPOS-PU [:app:gui:ac.csg.in2033.ipos.pu.gui.Main.main()].executor": "Run",
+    "Gradle.IPOS-PU [:app:members:ac.csg.in2033.ipos.pu.members.AppView.main()].executor": "Run",
+    "Gradle.IPOS-PU [:app:members:ac.csg.in2033.ipos.pu.members.Main.main()].executor": "Run",
+    "Gradle.IPOS-PU [:app:prm:ac.csg.in2033.ipos.pu.prm.Main.main()].executor": "Run",
+    "Gradle.IPOS-PU [:app:rpt:ac.csg.in2033.ipos.pu.rpt.Main.main()].executor": "Run",
+    "Gradle.IPOS-PU [:app:sales:ac.csg.in2033.ipos.pu.sales.Main.main()].executor": "Run",
+    "Gradle.IPOS-PU [:src:gui:ac.csg.in2033.ipos.pu.gui.Main.main()].executor": "Run",
+    "Gradle.IPOS-PU [:src:main:java:gui:ac.csg.in2033.ipos.pu.gui.Main.main()].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/fury/Git/Uni/Year 2/Coursework/IN2033/mediflow-solutions/csg-in2033/IPOS-PU/app",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app" />
@@ -136,11 +133,8 @@
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
       <DebugAllEnabled>false</DebugAllEnabled>
       <RunAsTest>true</RunAsTest>
-      <GradleProfilingDisabled>false</GradleProfilingDisabled>
-      <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
     <recent_temporary>

@@ -8,6 +8,9 @@ javafx {
     version = "21"
     modules("javafx.controls", "javafx.fxml")
 }
+dependencies {
+    implementation("org.xerial:sqlite-jdbc:3.45.1.0")
+}
 
 application {
     // Define the main class for the application.

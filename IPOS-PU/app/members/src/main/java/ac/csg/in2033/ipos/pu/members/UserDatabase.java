@@ -7,13 +7,16 @@ import java.sql.Statement;
 
 public class UserDatabase {
 
-    // CREATE TABLE
+    // create user table
     public static void createTable() {
 
         String sql = "CREATE TABLE IF NOT EXISTS users ("
                 + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + "username TEXT UNIQUE NOT  NULL,"
-                + "password TEXT NOT NULL"
+                + "username TEXT UNIQUE NOT NULL,"
+                + "password TEXT NOT NULL,"
+                + "userType TEXT NOT NULL,"
+                + "email TEXT UNIQUE NOT NULL,"
+                + "firstLogin INTEGER DEFAULT 1"
                 + ");";
 
         try (Connection conn = Database.connect();
@@ -27,26 +30,28 @@ public class UserDatabase {
         }
     }
 
-    // INSERT USER (REGISTER)
-    public static void insertUser(String username, String password) {
+    // insert user
+    public static void insertUser(String username, String email, String password, String userType) {
 
-        String sql = "INSERT INTO users(username, password) VALUES(?,?)";
+        String sql = "INSERT INTO users(username, password, userType , email) VALUES(?,?,?,?)";
 
         try (Connection conn = Database.connect();
              PreparedStatement ps = conn.prepareStatement(sql)) {
 
             ps.setString(1, username);
             ps.setString(2, password);
+            ps.setString(3, userType );
+            ps.setString(4, email);
 
             ps.executeUpdate();
-            System.out.println("User added to database");
+            System.out.println("User added");
 
         } catch (Exception e) {
-            System.out.println("Failed to insert user");
+            System.out.println("Error adding user");
         }
     }
 
-    // LOGIN
+    // login
     public static boolean login(String username, String password) {
 
         String sql = "SELECT * FROM users WHERE username=? AND password=?";
@@ -66,7 +71,7 @@ public class UserDatabase {
         }
     }
 
-    // CHANGE PASSWORD
+    // change password
     public static void changePassword(String username, String newPassword) {
 
         String sql = "UPDATE users SET password=? WHERE username=?";
@@ -82,6 +87,20 @@ public class UserDatabase {
 
         } catch (Exception e) {
             System.out.println("Failed to change password");
+        }
+    }
+    public static void setFirstLoginFalse(String email) {
+
+        String sql = "UPDATE users SET firstLogin=0 WHERE email=?";
+
+        try (Connection conn = Database.connect();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setString(1, email);
+            ps.executeUpdate();
+
+        } catch (Exception e) {
+            System.out.println("failed to set first login");
         }
     }
 }

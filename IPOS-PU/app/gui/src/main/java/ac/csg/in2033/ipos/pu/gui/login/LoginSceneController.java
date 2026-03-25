@@ -35,19 +35,20 @@ public class LoginSceneController extends SceneController {
 
     @FXML
     protected void OnLoginButtonClick() {
-        // log button press
-        if (logger.isDebugEnabled()) {
-            logger.debug("Login button pressed.");
-        }
 
-        // these will be passed somewhere else
-        String username = emailTextField.getText();
-        String password = passwordField.getText();
+     // these will be passed somewhere else
+    String email = emailTextField.getText();
+    String password = passwordField.getText();
 
-        boolean success = UserDatabase.login(username, password);
-
+    boolean success = UserDatabase.login(email, password);
+    // check first login
         if (success) {
-            notifLabel.setText("Login successful");
+            if (UserDatabase.isFirstLogin(email)) {
+                notifLabel.setText("please change your  password");
+                return;
+            }
+            String userType = UserDatabase.getUserType(email);
+            notifLabel.setText("Login successful: " + userType);
         } else {
             notifLabel.setText("Login failed");
         }

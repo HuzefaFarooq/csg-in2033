@@ -70,6 +70,26 @@ public class UserDatabase {
             return false;
         }
     }
+    public static String getUserType(String email) {
+
+        String sql = "SELECT userType FROM users WHERE email=?";
+
+        try (Connection conn = Database.connect();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setString(1, email);
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                return rs.getString("userType");
+            }
+
+        } catch (Exception e) {
+            System.out.println("Failed to get user type");
+        }
+
+        return null;
+    }
 
     // change password
     public static void changePassword(String username, String newPassword) {
@@ -102,5 +122,25 @@ public class UserDatabase {
         } catch (Exception e) {
             System.out.println("failed to set first login");
         }
+    }
+    public static boolean isFirstLogin(String email) {
+
+        String sql = "SELECT firstLogin FROM users WHERE email=?";
+
+        try (Connection conn = Database.connect();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setString(1, email);
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                return rs.getInt("firstLogin") == 1;
+            }
+
+        } catch (Exception e) {
+            System.out.println("Failed to check first login");
+        }
+
+        return false;
     }
 }

@@ -13,4 +13,9 @@
     <Label fx:id="javaVersionText" />
     <Button text="JavaFX Version" onAction="#onJavafxButtonClick" />
     <Button text="Java Version" onAction="#onJavaButtonClick" />
+    <Button text="Login" onAction="#handleLogin"/>
+    <Label fx:id="messageLabel" text="" />
+    <TextField fx:id="emailField" />
+    <PasswordField fx:id="passwordField" />
 </VBox>
+

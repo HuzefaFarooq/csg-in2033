@@ -52,14 +52,14 @@ public class UserDatabase {
     }
 
     // login
-    public static boolean login(String username, String password) {
+    public static boolean login(String email, String password) {
 
-        String sql = "SELECT * FROM users WHERE username=? AND password=?";
+        String sql = "SELECT * FROM users WHERE email=? AND password=?";
 
         try (Connection conn = Database.connect();
              PreparedStatement ps = conn.prepareStatement(sql)) {
 
-            ps.setString(1, username);
+            ps.setString(1, email);
             ps.setString(2, password);
 
             ResultSet rs = ps.executeQuery();

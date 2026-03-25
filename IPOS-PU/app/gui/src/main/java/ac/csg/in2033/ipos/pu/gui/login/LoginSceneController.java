@@ -1,6 +1,7 @@
 package ac.csg.in2033.ipos.pu.gui.login;
 
 import ac.csg.in2033.ipos.pu.gui.SceneController;
+import ac.csg.in2033.ipos.pu.members.UserDatabase;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -42,6 +43,14 @@ public class LoginSceneController extends SceneController {
         // these will be passed somewhere else
         String username = emailTextField.getText();
         String password = passwordField.getText();
+
+        boolean success = UserDatabase.login(username, password);
+
+        if (success) {
+            notifLabel.setText("Login successful");
+        } else {
+            notifLabel.setText("Login failed");
+        }
 
         // send user/password text to other system
         // check if user/password are correctly formatted

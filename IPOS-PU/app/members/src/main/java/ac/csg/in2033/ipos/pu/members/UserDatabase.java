@@ -107,14 +107,19 @@ public class UserDatabase {
             System.out.println("Failed to change password");
         }
     }
-    public static void setFirstLoginFalse(String email) {
-
-        String sql = "UPDATE users SET firstLogin=0 WHERE email=?";
-
+    public static void setFirstLogin(String email, boolean input) {
+        // Convert boolean to 1 or 0 to be stored in the DB
+        String s = input ? "1" : "0";
+        // Create query
+        String sql = "UPDATE users SET firstLogin=? WHERE email=?";
+        // Connect to database
         try (Connection conn = Database.connect();
              PreparedStatement ps = conn.prepareStatement(sql)) {
-
-            ps.setString(1, email);
+            // Set first ? to boolean parameter
+            ps.setString(1, s);
+            // Set second ? to email parameter
+            ps.setString(2, email);
+            // Execute query
             ps.executeUpdate();
 
         } catch (Exception e) {

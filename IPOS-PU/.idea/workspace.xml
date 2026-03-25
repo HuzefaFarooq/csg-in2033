@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8148f834-f186-49fc-8811-247a7f4f1461" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/login/RegisterSceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/login/RegisterSceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/members/src/main/java/ac/csg/in2033/ipos/pu/members/AppViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/members/src/main/java/ac/csg/in2033/ipos/pu/members/AppViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/members/src/main/java/ac/csg/in2033/ipos/pu/members/UserDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/members/src/main/java/ac/csg/in2033/ipos/pu/members/UserDatabase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +68,7 @@
     &quot;accountId&quot;: &quot;6919283c-2e85-48f9-9e13-a87a67cd485d&quot;
   }
 }</component>
-  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-9.3.1-bin/23ovyewtku6u96viwx3xl3oks/gradle-9.3.1" javaHome="$USER_HOME$/Library/Java/JavaVirtualMachines/openjdk-25.0.1/Contents/Home" gradleVersion="9.3.1" />
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-9.3.1-bin/23ovyewtku6u96viwx3xl3oks/gradle-9.3.1" javaHome="/usr/lib/jvm/default" gradleVersion="9.3.1" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
@@ -158,8 +156,11 @@
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
       <DebugAllEnabled>false</DebugAllEnabled>
       <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
     <recent_temporary>

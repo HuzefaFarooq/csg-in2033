@@ -51,7 +51,7 @@
 
             <Label text="Proof of Business:" GridPane.rowIndex="10" />
             <Button fx:id="fileSelectionButton" GridPane.rowIndex="11" mnemonicParsing="false" onAction="#OnChooseFileButtonClick" text="Choose File" />
-            <Label fx:id="fileSelection" GridPane.rowIndex="12" text="No file selected." />
+            <Label fx:id="fileSelectionLabel" GridPane.rowIndex="12" text="No file selected." />
         </children>
     </GridPane>
 

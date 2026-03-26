@@ -43,6 +43,10 @@ public class LoginSceneController extends SceneController {
         boolean success = UserDatabase.login(email, password);
 
         // check first login
+
+        // this will be commented out until database is implemented in
+        // order to test further features without issue using dummy data
+        /*
         if (success) {
             if (UserDatabase.isFirstLogin(email)) {
                 notifLabel.setText("Please change your password");
@@ -55,6 +59,7 @@ public class LoginSceneController extends SceneController {
         } else {
             notifLabel.setText("Login failed");
         }
+         */
 
         // send user/password text to other system
         // check if user/password are correctly formatted
@@ -64,5 +69,9 @@ public class LoginSceneController extends SceneController {
         // pass along the level of access of the user
 
         // if new user, prompt them to create a new password
+
+        // assuming success:
+        
+
     }
 }

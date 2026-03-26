@@ -1,5 +1,8 @@
 package ac.csg.in2033.ipos.pu.members;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.File;
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -7,6 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class Database {
+    private final static Logger logger = LoggerFactory.getLogger(Database.class);
 
     private static final String DB_NAME = "users.db";
 
@@ -25,7 +29,7 @@ public class Database {
             return DriverManager.getConnection(url);
 
         } catch (Exception e) {
-            System.out.println("Database connection failed");
+            logger.error("Database connection failed:", e);
             return null;
         }
     }

@@ -1,11 +1,15 @@
 package ac.csg.in2033.ipos.pu.members;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class UserDatabase {
+    private final static Logger logger = LoggerFactory.getLogger(UserDatabase.class);
 
     // create user table
     public static void createTable() {
@@ -22,10 +26,10 @@ public class UserDatabase {
              Statement s = conn.createStatement()) {
 
             s.execute(sql);
-            System.out.println("Users table created");
+            logger.debug("Users table created");
 
         } catch (Exception e) {
-            System.out.println("Failed to create table");
+            logger.error("Failed to create table:", e);
         }
     }
 
@@ -42,10 +46,10 @@ public class UserDatabase {
             ps.setString(3, userType);
 
             ps.executeUpdate();
-            System.out.println("User added");
+            logger.debug("User added");
 
         } catch (Exception e) {
-            System.out.println("Error adding user");
+            logger.error("Error adding user");
         }
     }
 
@@ -64,7 +68,7 @@ public class UserDatabase {
             return rs.next();
 
         } catch (Exception e) {
-            System.out.println("Failed to login");
+            logger.error("Failed to login:", e);
             return false;
         }
     }
@@ -83,7 +87,7 @@ public class UserDatabase {
             }
 
         } catch (Exception e) {
-            System.out.println("Failed to get user type");
+            logger.error("Failed to get user type:", e);
         }
 
         return null;
@@ -101,10 +105,10 @@ public class UserDatabase {
             ps.setString(2, username);
 
             ps.executeUpdate();
-            System.out.println("Password changed");
+            logger.debug("Password changed");
 
         } catch (Exception e) {
-            System.out.println("Failed to change password");
+            logger.error("Failed to change password:", e);
         }
     }
     public static void setFirstLogin(String email, boolean input) {
@@ -123,7 +127,7 @@ public class UserDatabase {
             ps.executeUpdate();
 
         } catch (Exception e) {
-            System.out.println("failed to set first login");
+            logger.error("failed to set first login:", e);
         }
     }
     public static boolean isFirstLogin(String email) {
@@ -141,7 +145,7 @@ public class UserDatabase {
             }
 
         } catch (Exception e) {
-            System.out.println("Failed to check first login");
+            logger.error("Failed to check first login:", e);
         }
 
         return false;

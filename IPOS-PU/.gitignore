@@ -7,8 +7,8 @@ build
 # Ignore Kotlin plugin data
 .kotlin
 
-# Ignore log output directory
-logs
+# Ignore log output files
+logs/*.log
 
 # Ignore Intellij workspace-specific direcotry
 .idea

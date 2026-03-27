@@ -1,32 +1,22 @@
-<configuration scan="true" scanPeriod="30 seconds">
-    <variable scope="local" name="defaultPattern" value="%date{HH:mm:ss.SSS} [Thread.%t] %-30c{1} %-5p %msg%n"/>
-    <variable scope="local" name="mainLogFileName" value="app/members/src/main//logs/app.log"/>
+<configuration>
 
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <pattern>${defaultPattern}</pattern>
-        </encoder>
-    </appender>
+    <!-- Include the shared common configuration -->
+    <include resource="logs/config/logback-common.xml"/>
 
-    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${mainLogFileName}</file>
+    <appender name="MEMBERS_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/members.log</file>
         <append>true</append>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${mainLogFileName}.%d{yyyy-MM-dd}.gz</fileNamePattern>
-            <maxHistory>2</maxHistory>
+            <fileNamePattern>logs/members.log.%d{yyyy-MM-dd}.gz</fileNamePattern>
+            <maxHistory>7</maxHistory>
         </rollingPolicy>
         <encoder>
-            <pattern>${defaultPattern}</pattern>
+            <pattern>%date{HH:mm:ss.SSS} [Thread.%t] %-30c{1} %-5p %msg%n</pattern>
         </encoder>
     </appender>
 
-    <logger name="ac.csg.in2033.ipos.pu.members" additivity="false" level="debug">
-        <appender-ref ref="FILE"/>
-        <appender-ref ref="STDOUT"/>
+    <logger name="ac.csg.in2033.ipos.pu.members" level="DEBUG">
+        <appender-ref ref="MEMBERS_FILE"/>
     </logger>
 
-    <root level="info">
-        <appender-ref ref="FILE"/>
-        <appender-ref ref="STDOUT"/>
-    </root>
 </configuration>

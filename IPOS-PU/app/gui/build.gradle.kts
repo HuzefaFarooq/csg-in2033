@@ -11,6 +11,7 @@ javafx {
 
 dependencies {
     implementation(project(":app:members"))
+    implementation(project(":app:sales"))
 }
 
 dependencies {

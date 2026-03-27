@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8148f834-f186-49fc-8811-247a7f4f1461" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/dashboard/ProductFeedSceneController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/gui/src/main/resources/ac/csg/in2033/ipos/pu/gui/dashboard/product/image/img-0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/gui/src/main/resources/ac/csg/in2033/ipos/pu/gui/dashboard/product/image/img-1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/gui/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/gui/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/gui/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/gui/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/gui/src/main/resources/ac/csg/in2033/ipos/pu/gui/dashboard/fxml/product-feed.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/app/gui/src/main/resources/ac/csg/in2033/ipos/pu/gui/dashboard/fxml/product-feed.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/login/RegisterSceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/gui/src/main/java/ac/csg/in2033/ipos/pu/gui/login/RegisterSceneController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,11 +159,8 @@
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
       <DebugAllEnabled>false</DebugAllEnabled>
       <RunAsTest>true</RunAsTest>
-      <GradleProfilingDisabled>false</GradleProfilingDisabled>
-      <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
     <recent_temporary>

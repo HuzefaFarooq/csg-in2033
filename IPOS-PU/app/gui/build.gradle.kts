@@ -13,6 +13,10 @@ dependencies {
     implementation(project(":app:members"))
 }
 
+dependencies {
+    implementation(project(":app:sales"))
+}
+
 application {
     // Define the main class for the application.
     mainClass = "ac.csg.in2033.ipos.pu.gui.Main"

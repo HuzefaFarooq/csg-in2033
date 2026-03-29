@@ -29,10 +29,10 @@ public class ProductFeedSceneController {
     @FXML
     public void initialize() {
         // Insert dummy data
-        allProducts.add(new Product(0, "Product 0", "This is product 0.", 1.0, "product/image/img-0.png"));
-        allProducts.add(new Product(1, "Product 1", "This is product 1.", 1.50, "product/image/img-1.png"));
-        allProducts.add(new Product(2, "Product 2", "This is product 2.", 1.99, "product/image/img-0.png"));
-        allProducts.add(new Product(3, "Product 3", "This is product 3.", 25.00, "product/image/img-1.png"));
+        allProducts.add(new Product(0, "Product 0", "This is product 0.", 1.0, "img/products/img-0.png"));
+        allProducts.add(new Product(1, "Product 1", "This is product 1.", 1.50, "img/products/img-1.png"));
+        allProducts.add(new Product(2, "Product 2", "This is product 2.", 1.99, "img/products/img-0.png"));
+        allProducts.add(new Product(3, "Product 3", "This is product 3.", 25.00, "img/products/img-1.png"));
 
         // Save all products
         productList.setAll(allProducts);

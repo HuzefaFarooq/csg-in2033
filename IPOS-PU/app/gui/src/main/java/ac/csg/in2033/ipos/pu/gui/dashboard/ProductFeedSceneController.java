@@ -82,6 +82,29 @@ public class ProductFeedSceneController {
         updateProductPrices();
     }
 
+    public void setPromotions(List<Promotion> promotions, List<Product> products) {
+        allProducts.setAll(products);
+
+        for (Product product : allProducts) {
+            double bestDiscount = 0;
+
+            for (Promotion promotion : promotions) {
+                if (promotion.isActive()) {
+                    double discount = promotion.getDiscount(String.valueOf(product.getId()));
+                    if (discount > bestDiscount) {
+                        bestDiscount = discount; // take highest, don't stack
+                    }
+                }
+            }
+
+            if (bestDiscount > 0) {
+                product.setDiscountedPrice(product.getPrice() * (1 - bestDiscount / 100));
+            }
+        }
+
+        productList.setAll(allProducts);
+    }
+
     // Update product prices based on the selected promotion
     private void updateProductPrices() {
         for (Product product : allProducts) {

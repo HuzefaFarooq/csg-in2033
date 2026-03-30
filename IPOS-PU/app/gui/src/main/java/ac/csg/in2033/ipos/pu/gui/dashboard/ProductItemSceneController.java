@@ -39,13 +39,18 @@ public class ProductItemSceneController {
         logger.info("Image file was found:{}", imagePath);
 
         productImage.setImage(new Image(imagePath));
+
         productName.setText(product.getName());
         productPrice.setText(String.format("£%.2f", product.getPrice()));
 
-        if (product.getPrice() < product.getDiscountedPrice()) {
+        if (product.getPrice() > product.getDiscountedPrice()) {
             productPrice.setStyle("-fx-strikethrough: true;");
             discountPrice.setText(String.format("£%.2f", product.getDiscountedPrice()));
+            discountPrice.setVisible(true);
             logger.info("Product of ID {} has a discounted price of {}.", product.getId(), product.getDiscountedPrice());
+        } else {
+            productPrice.setStyle("");
+            discountPrice.setVisible(false);
         }
     }
 }

@@ -42,6 +42,14 @@
             <Insets top="10" bottom="10" left="10" right="10"/>
         </padding>
 
-        <fx:include source="product-feed.fxml" />
+        <fx:include fx:id="productFeed" source="product-feed.fxml" />
+    </HBox>
+
+    <!-- PROMOTION FEED -->
+    <HBox alignment="CENTER">
+        <padding>
+            <Insets top="10" bottom="10" left="10" right="10"/>
+        </padding>
+        <fx:include fx:id="promotionFeed" source="promo/promotion-feed.fxml" />
     </HBox>
 </VBox>

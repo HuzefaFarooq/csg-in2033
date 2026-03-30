@@ -40,5 +40,5 @@ public class Product {
         return imageURL;
     }
 
-    public void setDiscountedPrice(double discountedPrice) { this.price = discountedPrice; }
+    public void setDiscountedPrice(double discountedPrice) { this.discountedPrice = discountedPrice; }
 }

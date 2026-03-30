@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="6" style="-fx-border-color: #cccccc; -fx-border-radius: 4; -fx-padding: 8;"
+      xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ac.csg.in2033.ipos.pu.gui.dashboard.PromotionBannerSceneController">
+
+    <!-- HEADER (always visible) -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label fx:id="promotionName" style="-fx-font-weight: bold; -fx-font-size: 13;" />
+        <Label fx:id="promotionStatus" />
+    </HBox>
+
+    <Label fx:id="promotionDates" style="-fx-font-size: 11; -fx-text-fill: #555555;" />
+
+    <!-- EXPANDED SECTION (hidden by default) -->
+    <VBox fx:id="expandedSection" spacing="4" visible="false" managed="false">
+        <Label text="Products in this promotion:" style="-fx-font-size: 11;" />
+        <ListView fx:id="promotionProductList" prefHeight="180" />
+    </VBox>
+</VBox>

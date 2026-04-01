@@ -3,56 +3,76 @@ package ac.csg.in2033.ipos.pu.sales;
 import java.util.List;
 
 /**
- * Handles the financial calculations and checkout process for IPOS-PU.
+ * Handles the financial calculations and checkout orchestration for IPOS-PU.
  */
 public class CheckoutManager {
 
     // Standard UK VAT rate (20%)
     private static final double STANDARD_TAX_RATE = 0.20;
 
-    // Loyalty discount rate (10%)
-    private static final double LOYALTY_DISCOUNT_RATE = 0.10;
+    // References to our other helper managers
+    private final DiscountManager discountManager;
+    private final OrderManager orderManager;
 
-    /**
-     * Calculates the final breakdown of the cart, applying all business rules.
-     * * @param cart The user's shopping cart.
-     * @param isTenthPurchase True if the user is a Non-Commercial member on their 10th order.
-     * @return The final amount to charge the customer's card.
-     */
-    public double calculateFinalTotal(Cart cart, boolean isTenthPurchase) {
-
-        double baseSubtotal = cart.getSubtotal();
-
-        double promoDiscountAmount = 0.0; // requires input from IPOS-SA
-
-        double totalAfterPromos = baseSubtotal - promoDiscountAmount;
-
-        double loyaltyDiscountAmount = 0.0;
-        if (isTenthPurchase) {
-            loyaltyDiscountAmount = totalAfterPromos * LOYALTY_DISCOUNT_RATE;
-        }
-
-        double totalTax = calculateTax(cart);
-
-        double finalTotalToCharge = totalAfterPromos - loyaltyDiscountAmount + totalTax;
-
-        return finalTotalToCharge;
+    public CheckoutManager(DiscountManager discountManager, OrderManager orderManager) {
+        this.discountManager = discountManager;
+        this.orderManager = orderManager;
     }
 
     /**
-     * Helper method to calculate tax based on item type.
+     * Calculates the final breakdown of the cart, delegating to DiscountManager.
      */
-    private double calculateTax(Cart cart) {
-        double taxTotal = 0.0;
+    public double calculateFinalTotal(Cart cart, String customerId, boolean isTenthPurchase) {
+        double baseSubtotal = cart.getSubtotal();
 
+        // 1. Ask DiscountManager for Promos
+        double promoDiscountAmount = discountManager.checkPromotionDiscount(cart);
+        double totalAfterPromos = baseSubtotal - promoDiscountAmount;
+
+        // 2. Ask DiscountManager for Loyalty
+        double loyaltyDiscountAmount = discountManager.check10thPurchaseDiscount(customerId, totalAfterPromos, isTenthPurchase);
+
+        // 3. Calculate Tax locally
+        double totalTax = calculateTax(cart);
+
+        return totalAfterPromos - loyaltyDiscountAmount + totalTax;
+    }
+
+    public double calculateTax(Cart cart) {
+        double taxTotal = 0.0;
         List<Cart.CartItem> items = cart.getItems();
         for (Cart.CartItem item : items) {
-            // Only apply tax if it is NOT a medical good
             if (!item.isMedicalGood()) {
                 taxTotal += (item.getLineTotal() * STANDARD_TAX_RATE);
             }
         }
-
         return taxTotal;
+    }
+
+    public boolean processCheckout(Cart cart, String customerId, boolean isTenthPurchase, String paymentDetails) {
+        // Step 1: Calculate the money
+        double finalTotal = calculateFinalTotal(cart, customerId, isTenthPurchase);
+
+        // Step 2: Confirm Order Summary
+        System.out.println(orderManager.confirmOrder(cart, finalTotal));
+
+        // Step 3: Make the Purchase
+        boolean paymentSuccess = orderManager.makePurchase(finalTotal, paymentDetails);
+
+        // Step 4: Handle Success or Failure
+        if (paymentSuccess) {
+            orderManager.recordItemsSold(cart, customerId, finalTotal);
+
+            // Generate a dummy order ID for skeleton purposes
+            String orderId = "ORD-" + System.currentTimeMillis();
+            orderManager.updateOrderStatus(orderId, "PAID_AND_CONFIRMED");
+
+            // Empty the cart after successful purchase
+            cart.clearCart();
+            return true;
+        } else {
+            System.out.println("Payment failed. Checkout aborted.");
+            return false;
+        }
     }
 }

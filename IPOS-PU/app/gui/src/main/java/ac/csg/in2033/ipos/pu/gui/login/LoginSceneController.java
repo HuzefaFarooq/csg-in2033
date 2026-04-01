@@ -1,9 +1,12 @@
 package ac.csg.in2033.ipos.pu.gui.login;
 
 import ac.csg.in2033.ipos.pu.gui.SceneController;
+import ac.csg.in2033.ipos.pu.gui.StageController;
+import ac.csg.in2033.ipos.pu.gui.dashboard.NC_DashboardSceneController;
 import ac.csg.in2033.ipos.pu.members.UserDatabase;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
@@ -43,6 +46,10 @@ public class LoginSceneController extends SceneController {
         boolean success = UserDatabase.login(email, password);
 
         // check first login
+
+        // this will be commented out until database is implemented in
+        // order to test further features without issue using dummy data
+        /*
         if (success) {
             if (UserDatabase.isFirstLogin(email)) {
                 notifLabel.setText("Please change your password");
@@ -55,6 +62,7 @@ public class LoginSceneController extends SceneController {
         } else {
             notifLabel.setText("Login failed");
         }
+         */
 
         // send user/password text to other system
         // check if user/password are correctly formatted
@@ -64,5 +72,19 @@ public class LoginSceneController extends SceneController {
         // pass along the level of access of the user
 
         // if new user, prompt them to create a new password
+
+        // assuming success:
+
+        try {
+            loadNonCommercialDashboard();
+        } catch (IOException e) {
+            logger.debug("Non-commercial user dashboard could not be loaded: ", e);
+        }
+
+    }
+
+    private void loadNonCommercialDashboard() throws IOException {
+        StageController.setScene(NC_DashboardSceneController.class.getResource("/ac/csg/in2033/ipos/pu/gui/dashboard/fxml/non-commercial-dashboard.fxml"));
+        StageController.setTitle("Dashboard");
     }
 }

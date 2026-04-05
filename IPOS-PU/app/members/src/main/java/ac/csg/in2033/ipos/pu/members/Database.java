@@ -17,6 +17,8 @@ public class Database {
     public static Connection connect() {
         try {
             File dbFile = new File(DB_NAME);
+            System.out.println("DB path: " + dbFile.getAbsolutePath());
+            System.out.println("DB exists: " + dbFile.exists());
 
             if (!dbFile.exists()) {
                 InputStream is = Database.class.getResourceAsStream("/sql/" + DB_NAME);

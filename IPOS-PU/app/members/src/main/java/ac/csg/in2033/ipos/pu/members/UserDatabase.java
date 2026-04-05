@@ -37,6 +37,8 @@ public class UserDatabase {
     // insert user
     public static void insertUser(String email, String password, String userType) {
 
+        System.out.println("Insert user called with " + email);
+
         String sql = "INSERT INTO users(email, password , userType) VALUES(?,?,?)";
 
         try (Connection conn = Database.connect();
@@ -48,9 +50,13 @@ public class UserDatabase {
 
             ps.executeUpdate();
             logger.debug("User added");
+            System.out.println("User added");
 
         } catch (Exception e) {
             logger.error("Error adding user");
+            System.out.println("Error adding user");
+            System.out.println("FAILED: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 

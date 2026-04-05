@@ -21,37 +21,42 @@ public class RegisterSceneController extends SceneController {
 
     @FXML
     protected void OnNonCommercialRegisterButtonClick() {
+        System.out.println("Testing connection.");
+
         // log button press
         if (logger.isDebugEnabled()) {
             logger.debug("Register button pressed.");
-            String email = emailTextField.getText();
-            if (email == null || email.isEmpty()) {
-                notifLabel.setText("Please enter your email");
-                return;
-            }
-            if (!email.contains("@")) {
-                notifLabel.setText("Invalid email");
-                return;
-            }
-            String generatedPassword = UserDatabase.generatePassword();
-
-            logger.debug("Generated password: {}", generatedPassword);
-
-            UserDatabase.insertUser(email, generatedPassword, "Non-commercial");
-
-            // these will be passed somewhere else
-            //String password = passwordField.getText();
-
-            // the user is notified if the username is unique to complete the
-            // verification process using their email
-            notifLabel.setText("Please verify your email to complete registration.");
-
-            // send user/password text to other system
-            // check if user/password are correctly formatted
-            // check if user exists
-            // if user details don't exist, pass them along
-            // if commercial, send to IPOS-SA
         }
+
+        String email = emailTextField.getText();
+        if (email == null || email.isEmpty()) {
+            notifLabel.setText("Please enter your email");
+            return;
+        }
+
+        if (!email.contains("@")) {
+            notifLabel.setText("Invalid email");
+            return;
+        }
+
+        String generatedPassword = UserDatabase.generatePassword();
+
+        logger.debug("Generated password: {}", generatedPassword);
+
+        UserDatabase.insertUser(email, generatedPassword, "Non-commercial");
+
+        // these will be passed somewhere else
+        //String password = passwordField.getText();
+
+        // the user is notified if the username is unique to complete the
+        // verification process using their email
+        notifLabel.setText("Please verify your email to complete registration.");
+
+        // send user/password text to other system
+        // check if user/password are correctly formatted
+        // check if user exists
+        // if user details don't exist, pass them along
+        // if commercial, send to IPOS-SA
     }
 
     @FXML

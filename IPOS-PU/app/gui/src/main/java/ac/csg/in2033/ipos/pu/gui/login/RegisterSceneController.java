@@ -41,9 +41,11 @@ public class RegisterSceneController extends SceneController {
 
         String generatedPassword = UserDatabase.generatePassword();
 
+        System.out.println("GUI/RegisterSceneController [DEBUG] : Generated password: " + generatedPassword);
+
         logger.debug("Generated password: {}", generatedPassword);
 
-        UserDatabase.insertUser(email, generatedPassword, "Non-commercial");
+        UserDatabase.insertUser(email, generatedPassword, "NC");
 
         // these will be passed somewhere else
         //String password = passwordField.getText();

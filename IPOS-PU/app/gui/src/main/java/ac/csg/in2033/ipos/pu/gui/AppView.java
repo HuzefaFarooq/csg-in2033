@@ -15,6 +15,10 @@ public class AppView extends Application {
         UserDatabase.createTable();
         PromotionDatabase.createTable();
 
+        // Create an admin for testing purposes
+        UserDatabase.insertAdminIfNotExists("admin@ipos.com", "admin123");
+
+        // Initialise GUI and window
         StageController.setStage(stage);
         StageController.setTitle("InfoPharma Online Portal");
         StageController.setScene(getClass().getResource("login/fxml/login-root-tab.fxml"));

@@ -50,13 +50,9 @@ public class UserDatabase {
 
             ps.executeUpdate();
             logger.debug("User added");
-            System.out.println("User added");
 
         } catch (Exception e) {
             logger.error("Error adding user");
-            System.out.println("Error adding user");
-            System.out.println("FAILED: " + e.getMessage());
-            e.printStackTrace();
         }
     }
 
@@ -208,6 +204,25 @@ public class UserDatabase {
 
         } catch (Exception e) {
             System.out.println("Failed to update purchase count");
+        }
+    }
+
+    public static void insertAdminIfNotExists(String email, String password) {
+        if (login(email, password)) return; // Admin account already exists
+
+        String sql = "INSERT OR IGNORE INTO users(email, password, userType) VALUES(?,?,?)";
+
+        try (Connection conn = Database.connect();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setString(1, email);
+            ps.setString(2, password);
+            ps.setString(3, "A");
+            ps.executeUpdate();
+            logger.debug("Admin account created.");
+
+        } catch (Exception e) {
+            logger.error("Failed to create admin account:", e);
         }
     }
 }

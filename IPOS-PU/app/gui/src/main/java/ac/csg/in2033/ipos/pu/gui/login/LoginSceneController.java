@@ -36,51 +36,44 @@ public class LoginSceneController extends SceneController {
     @FXML
     public Label notifLabel;
 
-    @FXML
     protected void OnLoginButtonClick() {
-
-         // these will be passed somewhere else
         String email = emailTextField.getText();
         String password = passwordField.getText();
 
+        if (email == null || email.isEmpty() || password == null || password.isEmpty()) {
+            notifLabel.setText("Please enter your email and password");
+            return;
+        }
+
         boolean success = UserDatabase.login(email, password);
 
-        // check first login
-
-        // this will be commented out until database is implemented in
-        // order to test further features without issue using dummy data
-        /*
-        if (success) {
-            if (UserDatabase.isFirstLogin(email)) {
-                notifLabel.setText("Please change your password");
-                emailLabel.setVisible(false);
-                emailTextField.setVisible(false);
-                return;
-            }
-            String userType = UserDatabase.getUserType(email);
-            notifLabel.setText("Login successful: " + userType);
-        } else {
-            notifLabel.setText("Login failed");
+        if (!success) {
+            notifLabel.setText("Invalid email or password");
+            return;
         }
-         */
 
-        // send user/password text to other system
-        // check if user/password are correctly formatted
-        // check if user exists
-        // check permissions of user
-        // if authenticated, show the main view fxml
-        // pass along the level of access of the user
+        if (UserDatabase.isFirstLogin(email)) {
+            notifLabel.setText("Please change your password before continuing");
+            // TODO: route to change password screen
+            return;
+        }
 
-        // if new user, prompt them to create a new password
-
-        // assuming success:
+        String userType = UserDatabase.getUserType(email);
 
         try {
-            loadNonCommercialDashboard();
+            switch (userType) {
+                case "A" -> loadAdminDashboard();
+                case "NC" -> loadNonCommercialDashboard();
+                // Add commercial dashboard later
+                default -> notifLabel.setText("Unknown user type: " + userType);
+            }
         } catch (IOException e) {
-            logger.debug("Non-commercial user dashboard could not be loaded: ", e);
+            logger.error("Failed to load dashboard for user type {}: ", userType, e);
+            notifLabel.setText("Failed to load dashboard");
         }
+    }
 
+    private void loadAdminDashboard() {
     }
 
     private void loadNonCommercialDashboard() throws IOException {

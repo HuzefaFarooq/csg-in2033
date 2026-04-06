@@ -208,9 +208,26 @@ public class UserDatabase {
     }
 
     public static void insertAdminIfNotExists(String email, String password) {
-        if (login(email, password)) return; // Admin account already exists
+        System.out.println("Attempting to create admin account...");
 
-        String sql = "INSERT OR IGNORE INTO users(email, password, userType) VALUES(?,?,?)";
+        // Check if admin already exists
+        String checkSql = "SELECT id FROM users WHERE email=?";
+
+        try (Connection conn = Database.connect();
+             PreparedStatement check = conn.prepareStatement(checkSql)) {
+
+            check.setString(1, email);
+            if (check.executeQuery().next()) {
+                System.out.println("Admin already exists, skipping creation.");
+                return;
+            }
+
+        } catch (Exception e) {
+            logger.error("Failed to check admin existence:", e);
+            return;
+        }
+
+        String sql = "INSERT INTO users(email, password, userType, firstLogin) VALUES(?,?,?,?)";
 
         try (Connection conn = Database.connect();
              PreparedStatement ps = conn.prepareStatement(sql)) {
@@ -218,11 +235,13 @@ public class UserDatabase {
             ps.setString(1, email);
             ps.setString(2, password);
             ps.setString(3, "A");
+            ps.setInt(4, 0);
             ps.executeUpdate();
-            logger.debug("Admin account created.");
+            System.out.println("Admin account created.");
 
         } catch (Exception e) {
             logger.error("Failed to create admin account:", e);
+            e.printStackTrace();
         }
     }
 }

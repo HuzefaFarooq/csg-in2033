@@ -2,6 +2,7 @@ package ac.csg.in2033.ipos.pu.gui.login;
 
 import ac.csg.in2033.ipos.pu.gui.SceneController;
 import ac.csg.in2033.ipos.pu.gui.StageController;
+import ac.csg.in2033.ipos.pu.gui.dashboard.A_DashboardSceneController;
 import ac.csg.in2033.ipos.pu.gui.dashboard.NC_DashboardSceneController;
 import ac.csg.in2033.ipos.pu.members.UserDatabase;
 import javafx.fxml.FXML;
@@ -36,6 +37,7 @@ public class LoginSceneController extends SceneController {
     @FXML
     public Label notifLabel;
 
+    @FXML
     protected void OnLoginButtonClick() {
         String email = emailTextField.getText();
         String password = passwordField.getText();
@@ -74,10 +76,17 @@ public class LoginSceneController extends SceneController {
     }
 
     private void loadAdminDashboard() {
+        StageController.setScene(A_DashboardSceneController.class.getResource(
+                "/ac/csg/in2033/ipos/pu/gui/dashboard/fxml/admin-dashboard.fxml"
+        ));
+        StageController.setTitle("Admin Dashboard");
+        System.out.println("Loading admin dashboard...");
     }
 
     private void loadNonCommercialDashboard() throws IOException {
-        StageController.setScene(NC_DashboardSceneController.class.getResource("/ac/csg/in2033/ipos/pu/gui/dashboard/fxml/non-commercial-dashboard.fxml"));
+        StageController.setScene(NC_DashboardSceneController.class.getResource(
+                "/ac/csg/in2033/ipos/pu/gui/dashboard/fxml/non-commercial-dashboard.fxml"
+        ));
         StageController.setTitle("Dashboard");
     }
 }

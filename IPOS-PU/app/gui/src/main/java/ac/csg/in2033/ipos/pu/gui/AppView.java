@@ -14,6 +14,7 @@ public class AppView extends Application {
         // Initialise databases
         UserDatabase.createTable();
         PromotionDatabase.createTable();
+        UserDatabase.createCommercialApplicationsTable();
 
         // Create an admin for testing purposes
         UserDatabase.insertAdminIfNotExists("admin@ipos.com", "admin123");

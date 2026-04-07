@@ -33,7 +33,30 @@ public class UserDatabase {
             logger.error("Failed to create table:", e);
         }
     }
+    // table to store commercial applications
+    // they need to be approved by IPOS-SA, so they are not users yet
+    // after its approved, the account will be created in themain user table
 
+    public static void createCommercialApplicationsTable() {
+        String sql = "CREATE TABLE IF NOT EXISTS commercial_applications ("
+                + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + "companyRegNumber TEXT NOT NULL,"
+                + "companyName TEXT NOT NULL,"
+                + "directors TEXT NOT NULL,"
+                + "businessType TEXT NOT NULL,"
+                + "address TEXT NOT NULL,"
+                + "email TEXT UNIQUE NOT NULL,"
+                + "status TEXT NOT NULL"
+                + ");";
+
+        try (Connection conn = Database.connect();
+             Statement s = conn.createStatement()) {
+            s.execute(sql);
+            logger.debug("Commercial applications table created");
+        } catch (Exception e) {
+            logger.error("Failed to create commercial applications table:", e);
+        }
+    }
     // insert user
     public static void insertUser(String email, String password, String userType) {
 
@@ -53,6 +76,29 @@ public class UserDatabase {
 
         } catch (Exception e) {
             logger.error("Error adding user");
+        }
+    }
+
+    // the application is stored with a pending status so IPOSA can review it later.
+    public static void insertCommercialApplication(String companyRegNumber, String companyName, String directors, String businessType, String address, String email) {
+
+        String sql = "INSERT INTO commercial_applications "
+                + "(companyRegNumber, companyName, directors, businessType, address, email, status) "
+                + "VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+        try (Connection conn = Database.connect();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+            ps.setString(1, companyRegNumber);
+            ps.setString(2, companyName);
+            ps.setString(3, directors);
+            ps.setString(4, businessType);
+            ps.setString(5, address);
+            ps.setString(6, email);
+            ps.setString(7, "PENDING");
+            ps.executeUpdate();
+            logger.debug("Commercial application inserted");
+        } catch (Exception e) {
+            logger.error("Failed to insert commercial application:", e);
         }
     }
 

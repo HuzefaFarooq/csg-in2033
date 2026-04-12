@@ -55,8 +55,12 @@ public class LoginSceneController extends SceneController {
         }
 
         if (UserDatabase.isFirstLogin(email)) {
-            notifLabel.setText("Please change your password before continuing");
-            // TODO: route to change password screen
+            try {
+                loadChangePasswordScreen(email);
+            } catch (IOException e) {
+                logger.error("Failed to load change password screen", e);
+                notifLabel.setText("Failed to load change password screen");
+            }
             return;
         }
 
@@ -88,5 +92,19 @@ public class LoginSceneController extends SceneController {
                 "/ac/csg/in2033/ipos/pu/gui/dashboard/fxml/non-commercial-dashboard.fxml"
         ));
         StageController.setTitle("Dashboard");
+    }
+    private void loadChangePasswordScreen(String email) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(
+                "/ac/csg/in2033/ipos/pu/gui/login/fxml/change-password.fxml"
+        ));
+        Parent root = loader.load();
+
+        ChangePasswordSceneController controller = loader.getController();
+        controller.setUserEmail(email);
+
+        Stage stage = (Stage) loginButton.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.setTitle("Change Password");
+        stage.show();
     }
 }

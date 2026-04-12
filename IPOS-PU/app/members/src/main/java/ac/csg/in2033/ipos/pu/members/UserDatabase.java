@@ -163,16 +163,13 @@ public class UserDatabase {
     }
 
     public static void setFirstLogin(String email, boolean input) {
-        // Convert boolean to 1 or 0 to be stored in the DB
-        String s = input ? "1" : "0";
-        // Create query
+        int value = input ? 1 : 0;
         String sql = "UPDATE users SET firstLogin=? WHERE email=?";
         // Connect to database
         try (Connection conn = Database.connect();
              PreparedStatement ps = conn.prepareStatement(sql)) {
-            // Set first ? to boolean parameter
-            ps.setString(1, s);
-            // Set second ? to email parameter
+
+            ps.setInt(1, value);
             ps.setString(2, email);
             // Execute query
             ps.executeUpdate();

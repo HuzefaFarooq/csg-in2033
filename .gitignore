@@ -30,3 +30,7 @@ gradle-app.setting
 
 # VPP temp files
 *.vpp-journal
+
+.obsidian
+
+.~lock.*
